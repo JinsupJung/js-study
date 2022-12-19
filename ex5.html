@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function NightDayHandle(self) {
+            var target = document.querySelector('body');
+            if(self.value === 'Night') { 
+            
+                target.style.backgroundColor='black';
+                target.style.color='white';
+                self.value = 'Day';
+            } else {
+                target.style.backgroundColor='white';
+                target.style.color='black';
+                document.querySelector('#night_day').value = 'Night';
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+
+    <input type="button" value="Night" onclick="
+    
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    
+    ">
+    <input type="button" value="Day" onclick="
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    ">
+
+<!--    <input id="night_day" type="button" value="Night" onclick=" onclick다음에는 스크립트가 오므로 주석은 /* 로 묶는다
+
+    if(document.querySelector('#night_day').value === 'Night') { 
+    
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        document.querySelector('body') = 'Day';
+    } else {
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        document.querySelector('#night_day').value = 'Night';
+    }
+
+    ">
+-->
+    <input id="night_day" type="button" value="Night" onclick="
+        NightDayHandle(this);
+    ">
+    
+    <p><h2>JavaScript</h2></p>
+</body>
+</html>
