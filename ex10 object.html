@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        var coworkers = {
+            programmer : "egoing",
+            designer : "leeche",
+            "data scientist" : "duru"
+        };
+        document.write(coworkers.designer+"<br>");
+        document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+        document.write(coworkers["data scientist"]+"<br>");
+
+        // 반복 출력
+        for (var key in coworkers) {
+            document.write(key+'<br>');
+            //document.write(coworkers[key]+'<br>');
+            //document.write(key, coworkers[key]+'<br>');
+        }
+   </script>
+   
+   <h2>Property & Method</h2>
+   <script>
+    coworkers.showAll = function() {
+        for (var key in this) {
+            document.write(key+'<br>');
+            //document.write(coworkers[key]+'<br>');
+            //document.write(key, coworkers[key]+'<br>');
+        }
+    }
+    coworkers.showAll();
+   </script>
+
+</body>
+</html>
